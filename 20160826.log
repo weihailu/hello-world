@@ -1,0 +1,88 @@
+1         |08:01:08:758|XFSIPCPack.cpp      |TrcErrInit                    |$MOD$ 150112 3104 IPCPack.dll|
+1         |08:01:08:758|XfsDesc.cpp         |TrcErrInit                    |$MOD$ 121102 3101 XfsDesc.dll|
+4         |08:01:08:758|XfsAgent.cpp        |DllMain                       |DLL_PROCESS_ATTACH: Enter CurrentProcessId->3224,CurrentThreadId->3204|
+1         |08:01:08:758|XfsAgent.cpp        |TrcErrInit                    |$MOD$ 130421 3410 XFSAgent.dll XFS_API v2.00 to v3.20|
+20        |08:01:08:758|XfsAgent.cpp        |WFPOpen                       |Enter:hService=6,lpszLogicalName=PIN30 ,dwTraceLevel=0,dwSPIVersionsRequired=0x101FF03,dwSrvcVersionsRequired=0x1010A03,hWnd=0x10310, ReqID=12|
+4         |08:01:08:758|XfsAgent.cpp        |CreateProcessAndWaitForIdle   |PINService.exe PIN30 3224|
+1         |08:01:08:774|XfsDesc.cpp         |TrcErrInit                    |$MOD$ 121102 3101 XfsDesc.dll|
+1         |08:01:08:774|XFSIPCPack.cpp      |TrcErrInit                    |$MOD$ 150112 3104 IPCPack.dll|
+1         |08:01:08:774|XfsBaseClass        |TrcErrInit                    |$MOD$ 121121 3508 SPBase.dll|
+1         |08:01:08:774|XfsBasePinPad310.cpp|TrcErrInit                    |$MOD$ 150108 3210 SPPinPad.dll|
+1         |08:01:08:774|PinPad_E3051.cpp    |TrcErrInit                    |$MOD$ 150109 3104 PinPad_E3051.dll|
+1         |08:01:08:774|J6_E6020_GE.cpp     |TrcErrInit                    |$MOD$ 140508 3407 PinPad_J6.dll|
+1         |08:01:08:774|PINService.cpp      |TrcErrInit                    |$MOD$ 130628 3003 PINService.exe /E3051|
+20        |08:01:08:789|XfsAgent.cpp        |WFPOpen                       |Leave:hService=6,hWnd=0x10310, ReqID=12,hResult=WFS_SUCCESS|
+20        |08:01:09:803|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x10310],Event=[WFS_OPEN_COMPLETE]: hResult=[0x1D8BDAC]):
+RequestID=[12],hService=[6],hResult=[WFS_SUCCESS],dwCommandCode=[0],pResult->lpBuffer=[0x0]|
+20        |08:01:09:803|XfsAgent.cpp        |WFPSetTraceLevel              |Enter:hService=6, dwTraceLevel=0|
+20        |08:01:09:803|XfsAgent.cpp        |WFPSetTraceLevel              |Leave:hService=6,hResult= WFS_SUCCESS|
+20        |08:01:09:803|XfsAgent.cpp        |WFPRegister                   |Enter:hService=6, dwEventClass=0xF, hWndReg=0x4030A, hWnd=0x20310, ReqID=13|
+20        |08:01:09:803|XfsAgent.cpp        |WFPRegister                   |Leave:hService=6,hWnd=0x20310, ReqID=13,hResult=WFS_SUCCESS|
+20        |08:01:09:803|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x20310],Event=[WFS_REGISTER_COMPLETE]: hResult=[0x1D8BDAC]):
+RequestID=[13],hService=[6],hResult=[WFS_SUCCESS],dwCommandCode=[0],pResult->lpBuffer=[0x0]|
+100       |08:01:09:803|XfsBasePinPad310.cpp|PIN.OnGetInfo                 |dwCategory=[WFS_INF_PIN_STATUS]:fwDevice=[2],fwEncStat=[1],lpszExtra=[FirmwareVersion=LastErrorCode=-13LastErrorMessage=WFS_ERR_DEV_NOT_READYDeviceID=IsRmoved=0IsLowBattery=0IsRAMInValid=0StuckKeyValue=0x0UID=EXEVersion=$MOD$ 140508 3407 PinPad_J6.dllDllVersion=$MOD$ 150114 3505 JusttideEPPDrv.dll],fwAutoBeepMode=[3],dwCertificateState=[0],wDevicePosition=[3],usPowerSaveRecoveryTime=[0]|
+20        |08:01:11:316|XfsAgent.cpp        |WFPExecute                    |Enter:hService=6, dwCommand=WFS_CMD_PIN_GET_DATA, lpCmdData=0x1DF840,dwTimeOut=0 hWnd=0x4030A, ReqID=21|
+20        |08:01:11:316|XfsAgent.cpp        |WFPExecute                    |Leave:hService=6,dwCommand=WFS_CMD_PIN_GET_DATA, hWnd=0x4030A, ReqID=21,hResult=WFS_SUCCESS|
+400       |08:01:11:316|XfsBasePinPad310.cpp|PIN.OnExecute                 |dwCommand=[WFS_CMD_PIN_GET_DATA] Enter:usMaxLen=[0], bAutoEnd=[0],ulActiveFDKs=[0x0],ulActiveKeys=[0x19FFF],ulTerminateFDKs=[0x0],ulTerminateKeys=[0xC00]|
+20        |08:01:11:316|XfsAgent.cpp        |WFPCancelAsyncRequest         |Enter:hService=6, ReqID=21|
+20        |08:01:11:316|XfsAgent.cpp        |WFPCancelAsyncRequest         |Leave:hService=6,ReqID=21,hResult=WFS_SUCCESS|
+1         |08:01:11:316|XfsBasePinPad310.cpp|PIN.OnExecute                 |Call Function WFS_CMD_PIN_GET_DATA Failure (WFS_ERR_DEV_NOT_READY)|
+1         |08:01:11:316|XfsBaseClass        |OnExecute                     |Call OnExecute(WFS_CMD_PIN_GET_DATA) Failure (WFS_ERR_DEV_NOT_READY)|
+1         |08:01:11:316|XfsBaseClass        |HandleRequest                 |Call OnSPExecute Failure (WFS_ERR_DEV_NOT_READY)|
+20        |08:01:11:316|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x4030A],Event=[WFS_EXECUTE_COMPLETE]: hResult=[0x1D8CA9C]):
+RequestID=[21],hService=[6],hResult=[WFS_ERR_DEV_NOT_READY],dwCommandCode=[WFS_CMD_PIN_GET_DATA],pResult->lpBuffer=[0x0]|
+20        |09:49:54:558|XfsAgent.cpp        |WFPExecute                    |Enter:hService=6, dwCommand=WFS_CMD_PIN_GET_DATA, lpCmdData=0x2633D10,dwTimeOut=0 hWnd=0xF0330, ReqID=34|
+20        |09:49:54:558|XfsAgent.cpp        |WFPExecute                    |Leave:hService=6,dwCommand=WFS_CMD_PIN_GET_DATA, hWnd=0xF0330, ReqID=34,hResult=WFS_SUCCESS|
+400       |09:49:54:558|XfsBasePinPad310.cpp|PIN.OnExecute                 |dwCommand=[WFS_CMD_PIN_GET_DATA] Enter:usMaxLen=[0], bAutoEnd=[0],ulActiveFDKs=[0x0],ulActiveKeys=[0x1FFF],ulTerminateFDKs=[0x0],ulTerminateKeys=[0xC00]|
+1         |09:49:54:558|XfsBasePinPad310.cpp|PIN.OnExecute                 |Call Function WFS_CMD_PIN_GET_DATA Failure (WFS_ERR_DEV_NOT_READY)|
+1         |09:49:54:558|XfsBaseClass        |OnExecute                     |Call OnExecute(WFS_CMD_PIN_GET_DATA) Failure (WFS_ERR_DEV_NOT_READY)|
+1         |09:49:54:558|XfsBaseClass        |HandleRequest                 |Call OnSPExecute Failure (WFS_ERR_DEV_NOT_READY)|
+20        |09:49:54:558|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0xF0330],Event=[WFS_EXECUTE_COMPLETE]: hResult=[0x84C9914]):
+RequestID=[34],hService=[6],hResult=[WFS_ERR_DEV_NOT_READY],dwCommandCode=[WFS_CMD_PIN_GET_DATA],pResult->lpBuffer=[0x0]|
+100       |10:35:13:315|XfsBasePinPad310.cpp|PIN.OnGetInfo                 |dwCategory=[WFS_INF_PIN_STATUS]:fwDevice=[2],fwEncStat=[1],lpszExtra=[FirmwareVersion=LastErrorCode=-13LastErrorMessage=WFS_ERR_DEV_NOT_READYDeviceID=IsRmoved=0IsLowBattery=0IsRAMInValid=0StuckKeyValue=0x0UID=EXEVersion=$MOD$ 140508 3407 PinPad_J6.dllDllVersion=$MOD$ 150114 3505 JusttideEPPDrv.dll],fwAutoBeepMode=[3],dwCertificateState=[0],wDevicePosition=[3],usPowerSaveRecoveryTime=[0]|
+100       |10:39:19:216|XfsBasePinPad310.cpp|PIN.OnGetInfo                 |dwCategory=[WFS_INF_PIN_STATUS]:fwDevice=[2],fwEncStat=[1],lpszExtra=[FirmwareVersion=LastErrorCode=-13LastErrorMessage=WFS_ERR_DEV_NOT_READYDeviceID=IsRmoved=0IsLowBattery=0IsRAMInValid=0StuckKeyValue=0x0UID=EXEVersion=$MOD$ 140508 3407 PinPad_J6.dllDllVersion=$MOD$ 150114 3505 JusttideEPPDrv.dll],fwAutoBeepMode=[3],dwCertificateState=[0],wDevicePosition=[3],usPowerSaveRecoveryTime=[0]|
+1         |10:39:42:538|XfsBaseClass        |CloseDisconnect               |Application Already Quit (LogName=PIN30, hService=6)|
+1         |10:40:53:658|XFSIPCPack.cpp      |TrcErrInit                    |$MOD$ 150112 3104 IPCPack.dll|
+1         |10:40:53:658|XfsDesc.cpp         |TrcErrInit                    |$MOD$ 121102 3101 XfsDesc.dll|
+4         |10:40:53:658|XfsAgent.cpp        |DllMain                       |DLL_PROCESS_ATTACH: Enter CurrentProcessId->3008,CurrentThreadId->3092|
+1         |10:40:53:658|XfsAgent.cpp        |TrcErrInit                    |$MOD$ 130421 3410 XFSAgent.dll XFS_API v2.00 to v3.20|
+20        |10:40:53:674|XfsAgent.cpp        |WFPOpen                       |Enter:hService=6,lpszLogicalName=PIN30 ,dwTraceLevel=0,dwSPIVersionsRequired=0x101FF03,dwSrvcVersionsRequired=0x1010A03,hWnd=0x10302, ReqID=12|
+4         |10:40:53:674|XfsAgent.cpp        |CreateProcessAndWaitForIdle   |PINService.exe PIN30 3008|
+1         |10:40:53:690|XfsDesc.cpp         |TrcErrInit                    |$MOD$ 121102 3101 XfsDesc.dll|
+1         |10:40:53:690|XFSIPCPack.cpp      |TrcErrInit                    |$MOD$ 150112 3104 IPCPack.dll|
+1         |10:40:53:690|XfsBaseClass        |TrcErrInit                    |$MOD$ 121121 3508 SPBase.dll|
+1         |10:40:53:705|XfsBasePinPad310.cpp|TrcErrInit                    |$MOD$ 150108 3210 SPPinPad.dll|
+1         |10:40:53:705|PinPad_E3051.cpp    |TrcErrInit                    |$MOD$ 150109 3104 PinPad_E3051.dll|
+1         |10:40:53:705|J6_E6020_GE.cpp     |TrcErrInit                    |$MOD$ 140508 3407 PinPad_J6.dll|
+1         |10:40:53:721|PINService.cpp      |TrcErrInit                    |$MOD$ 130628 3003 PINService.exe /E3051|
+20        |10:40:53:752|XfsAgent.cpp        |WFPOpen                       |Leave:hService=6,hWnd=0x10302, ReqID=12,hResult=WFS_SUCCESS|
+20        |10:40:54:766|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x10302],Event=[WFS_OPEN_COMPLETE]: hResult=[0x2036834]):
+RequestID=[12],hService=[6],hResult=[WFS_SUCCESS],dwCommandCode=[0],pResult->lpBuffer=[0x0]|
+20        |10:40:54:766|XfsAgent.cpp        |WFPSetTraceLevel              |Enter:hService=6, dwTraceLevel=0|
+20        |10:40:54:766|XfsAgent.cpp        |WFPSetTraceLevel              |Leave:hService=6,hResult= WFS_SUCCESS|
+20        |10:40:54:766|XfsAgent.cpp        |WFPRegister                   |Enter:hService=6, dwEventClass=0xF, hWndReg=0x402FC, hWnd=0x20302, ReqID=13|
+20        |10:40:54:766|XfsAgent.cpp        |WFPRegister                   |Leave:hService=6,hWnd=0x20302, ReqID=13,hResult=WFS_SUCCESS|
+20        |10:40:54:766|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x20302],Event=[WFS_REGISTER_COMPLETE]: hResult=[0x2036834]):
+RequestID=[13],hService=[6],hResult=[WFS_SUCCESS],dwCommandCode=[0],pResult->lpBuffer=[0x0]|
+100       |10:40:54:766|XfsBasePinPad310.cpp|PIN.OnGetInfo                 |dwCategory=[WFS_INF_PIN_STATUS]:fwDevice=[2],fwEncStat=[1],lpszExtra=[FirmwareVersion=LastErrorCode=-13LastErrorMessage=WFS_ERR_DEV_NOT_READYDeviceID=IsRmoved=0IsLowBattery=0IsRAMInValid=0StuckKeyValue=0x0UID=EXEVersion=$MOD$ 140508 3407 PinPad_J6.dllDllVersion=$MOD$ 150114 3505 JusttideEPPDrv.dll],fwAutoBeepMode=[3],dwCertificateState=[0],wDevicePosition=[3],usPowerSaveRecoveryTime=[0]|
+20        |10:40:56:279|XfsAgent.cpp        |WFPExecute                    |Enter:hService=6, dwCommand=WFS_CMD_PIN_GET_DATA, lpCmdData=0x20FD0C,dwTimeOut=0 hWnd=0x402FC, ReqID=21|
+20        |10:40:56:279|XfsAgent.cpp        |WFPExecute                    |Leave:hService=6,dwCommand=WFS_CMD_PIN_GET_DATA, hWnd=0x402FC, ReqID=21,hResult=WFS_SUCCESS|
+400       |10:40:56:279|XfsBasePinPad310.cpp|PIN.OnExecute                 |dwCommand=[WFS_CMD_PIN_GET_DATA] Enter:usMaxLen=[0], bAutoEnd=[0],ulActiveFDKs=[0x0],ulActiveKeys=[0x19FFF],ulTerminateFDKs=[0x0],ulTerminateKeys=[0xC00]|
+20        |10:40:56:279|XfsAgent.cpp        |WFPCancelAsyncRequest         |Enter:hService=6, ReqID=21|
+20        |10:40:56:279|XfsAgent.cpp        |WFPCancelAsyncRequest         |Leave:hService=6,ReqID=21,hResult=WFS_SUCCESS|
+1         |10:40:56:279|XfsBasePinPad310.cpp|PIN.OnExecute                 |Call Function WFS_CMD_PIN_GET_DATA Failure (WFS_ERR_DEV_NOT_READY)|
+1         |10:40:56:279|XfsBaseClass        |OnExecute                     |Call OnExecute(WFS_CMD_PIN_GET_DATA) Failure (WFS_ERR_DEV_NOT_READY)|
+1         |10:40:56:279|XfsBaseClass        |HandleRequest                 |Call OnSPExecute Failure (WFS_ERR_DEV_NOT_READY)|
+20        |10:40:56:279|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x402FC],Event=[WFS_EXECUTE_COMPLETE]: hResult=[0x20B162C]):
+RequestID=[21],hService=[6],hResult=[WFS_ERR_DEV_NOT_READY],dwCommandCode=[WFS_CMD_PIN_GET_DATA],pResult->lpBuffer=[0x0]|
+100       |10:46:15:971|XfsBasePinPad310.cpp|PIN.OnGetInfo                 |dwCategory=[WFS_INF_PIN_STATUS]:fwDevice=[2],fwEncStat=[1],lpszExtra=[FirmwareVersion=LastErrorCode=-13LastErrorMessage=WFS_ERR_DEV_NOT_READYDeviceID=IsRmoved=0IsLowBattery=0IsRAMInValid=0StuckKeyValue=0x0UID=EXEVersion=$MOD$ 140508 3407 PinPad_J6.dllDllVersion=$MOD$ 150114 3505 JusttideEPPDrv.dll],fwAutoBeepMode=[3],dwCertificateState=[0],wDevicePosition=[3],usPowerSaveRecoveryTime=[0]|
+20        |10:46:29:465|XfsAgent.cpp        |WFPDeregister                 |Enter:hService=6, dwEventClass=0xF, hWndReg=0x402FC, hWnd=0x140302, ReqID=38|
+20        |10:46:29:465|XfsAgent.cpp        |WFPDeregister                 |Leave:hService=6,hWnd=0x140302, ReqID=38,hResult=WFS_SUCCESS|
+20        |10:46:29:465|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x140302],Event=[WFS_DEREGISTER_COMPLETE]: hResult=[0x20B01A4]):
+RequestID=[38],hService=[6],hResult=[WFS_SUCCESS],dwCommandCode=[0],pResult->lpBuffer=[0x0]|
+20        |10:46:29:465|XfsAgent.cpp        |WFPClose                      |Enter:hService=6,hWnd=0x150302, ReqID=39|
+20        |10:46:29:465|XfsAgent.cpp        |WFPClose                      |Leave:hService=6,hWnd=0x150302, ReqID=39,hResult=WFS_SUCCESS|
+20        |10:46:29:465|XfsAgent.cpp        |EventWindowProc               |PostMessage(hWnd=[0x150302],Event=[WFS_CLOSE_COMPLETE]: hResult=[0x20B01A4]):
+RequestID=[39],hService=[6],hResult=[WFS_SUCCESS],dwCommandCode=[0],pResult->lpBuffer=[0x0]|
+4         |10:46:29:465|XfsAgent.cpp        |DllMain                       |DLL_PROCESS_DETACH: CurrentProcessId->3008,CurrentThreadId->3092|
+4         |10:46:29:465|XfsAgent.cpp        |DllMain                       |s_hEventWnd=0x0,s_hSLMutex=0x0,s_hEventThread=0x0|
